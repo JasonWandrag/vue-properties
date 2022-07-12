@@ -1,0 +1,119 @@
+{
+  "properties": [
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 1,
+      "image_url": "https://picsum.photos/600?random=1"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 2,
+      "image_url": "https://picsum.photos/600?random=2"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 3,
+      "image_url": "https://picsum.photos/600?random=3"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 4,
+      "image_url": "https://picsum.photos/600?random=4"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 5,
+      "image_url": "https://picsum.photos/600?random=5"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 6,
+      "image_url": "https://picsum.photos/600?random=6"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 7,
+      "image_url": "https://picsum.photos/600?random=7"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 8,
+      "image_url": "https://picsum.photos/600?random=8"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 9,
+      "image_url": "https://picsum.photos/600?random=9"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "id": 10,
+      "image_url": "https://picsum.photos/600?random=10"
+    },
+    {
+      "title": "Stylish Studio",
+      "area": "Durban",
+      "bedrooms": "5",
+      "image_url": "https://picsum.photos/600?random=10",
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "full_name": "Jason Wandrag",
+      "email": "jason@gmail.com",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "full_name": "Oslin Johnson",
+      "email": "oslin@gmail.com",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "full_name": "Shane Kolkato",
+      "email": "shane@gmail.com",
+      "password": "password"
+    },
+    {
+      "full_name": "Carla Amy Lawrence",
+      "email": "carla@gmail.com",
+      "password": "password",
+      "id": 4
+    },
+    {
+      "full_name": "Uzair Damonse",
+      "email": "uzair@gmail.com",
+      "password": "password",
+      "id": 5
+    },
+    {
+      "full_name": "malia",
+      "email": "mward7006@gmail.com",
+      "password": "meagan22",
+      "id": 6
+    }
+  ]
+}
