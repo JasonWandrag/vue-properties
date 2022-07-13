@@ -1,0 +1,45 @@
+<template>
+  <button @click="toggleModal">Update</button>
+  <div v-if="active" class="modal">
+    <button @click="toggleModal">x</button>
+    <form @submit.prevent="updateProperty">
+      <input type="text" v-model="property.title" />
+      <input type="text" v-model="property.area" />
+      <input type="text" v-model="property.image_url" />
+      <input type="number" v-model="property.bedrooms" />
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["property"],
+  data() {
+    return {
+      active: false,
+    };
+  },
+  methods: {
+    toggleModal() {
+      this.active = !this.active;
+    },
+    updateProperty() {
+      this.$store.dispatch("updateProperty", this.property);
+      this.toggleModal();
+    },
+  },
+};
+</script>
+
+<style>
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border: 5px solid black;
+}
+</style>

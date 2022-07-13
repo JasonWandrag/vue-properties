@@ -9,9 +9,11 @@
           <th>Area</th>
           <th>Bedrooms</th>
           <th>Image URL</th>
+          <th><button>Add</button></th>
         </tr>
       </thead>
       <tbody>
+        x``
         <tr v-for="property of properties" :key="property.id">
           <td>{{ property.id }}</td>
           <td><img :src="property.image_url" :alt="property.title" /></td>
@@ -19,6 +21,10 @@
           <td>{{ property.area }}</td>
           <td>{{ property.bedrooms }}</td>
           <td>{{ property.image_url }}</td>
+          <td>
+            <button @click="deleteProperty(property.id)">Delete</button>
+            <UpdateModal :property="property" />
+          </td>
         </tr>
       </tbody>
     </table>
@@ -26,6 +32,7 @@
 </template>
 
 <script>
+import UpdateModal from "../components/UpdateModal.vue";
 export default {
   computed: {
     properties() {
@@ -34,6 +41,12 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getProperties");
+  },
+  components: { UpdateModal },
+  methods: {
+    deleteProperty(id) {
+      this.$store.dispatch("deleteProperty", id);
+    },
   },
 };
 </script>

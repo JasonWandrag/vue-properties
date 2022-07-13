@@ -10,7 +10,7 @@
     {
       "title": "Stylish Studio",
       "area": "Durban",
-      "bedrooms": "5",
+      "bedrooms": 3,
       "id": 2,
       "image_url": "https://picsum.photos/600?random=2"
     },
@@ -43,14 +43,14 @@
       "image_url": "https://picsum.photos/600?random=6"
     },
     {
-      "title": "Stylish Studio",
+      "title": "Blah Blah",
       "area": "Durban",
       "bedrooms": "5",
       "id": 7,
       "image_url": "https://picsum.photos/600?random=7"
     },
     {
-      "title": "Stylish Studio",
+      "title": "Modern House",
       "area": "Durban",
       "bedrooms": "5",
       "id": 8,
@@ -69,13 +69,6 @@
       "bedrooms": "5",
       "id": 10,
       "image_url": "https://picsum.photos/600?random=10"
-    },
-    {
-      "title": "Stylish Studio",
-      "area": "Durban",
-      "bedrooms": "5",
-      "image_url": "https://picsum.photos/600?random=10",
-      "id": 11
     }
   ],
   "users": [
@@ -114,6 +107,12 @@
       "email": "mward7006@gmail.com",
       "password": "meagan22",
       "id": 6
+    },
+    {
+      "full_name": "Siyabonga Mkhosana",
+      "email": "mkhosana@gmail.com",
+      "password": "password",
+      "id": 7
     }
   ]
 }

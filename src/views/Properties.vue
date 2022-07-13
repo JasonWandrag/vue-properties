@@ -5,6 +5,7 @@
       :key="property.id"
       :property="property"
     />
+    {{ idArray }}
   </div>
   <div v-else>Loading...</div>
 </template>
@@ -17,6 +18,9 @@ export default {
   computed: {
     properties() {
       return this.$store.state.properties;
+    },
+    idArray() {
+      return this.properties.map((property) => property.id);
     },
   },
   components: { PropertyCard },
