@@ -1,11 +1,11 @@
 <template>
+  <button @click="sortPrice">Sort By Price</button>
   <div v-if="properties" class="flex-container">
     <PropertyCard
       v-for="property of properties"
       :key="property.id"
       :property="property"
     />
-    {{ idArray }}
   </div>
   <div v-else>Loading...</div>
 </template>
@@ -19,11 +19,13 @@ export default {
     properties() {
       return this.$store.state.properties;
     },
-    idArray() {
-      return this.properties.map((property) => property.id);
-    },
   },
   components: { PropertyCard },
+  methods: {
+    sortPrice() {
+      this.$store.commit("sortPropertiesByPrice");
+    },
+  },
 };
 </script>
 <style>

@@ -5,6 +5,7 @@
       {{ property.title }}
     </h3>
     <p>Area: {{ property.area }}</p>
+    <p>Price: R{{ property.price }}</p>
   </router-link>
 </template>
 
@@ -14,4 +15,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+</style>

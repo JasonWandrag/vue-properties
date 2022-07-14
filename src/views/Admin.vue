@@ -8,18 +8,19 @@
           <th>Title</th>
           <th>Area</th>
           <th>Bedrooms</th>
+          <th @click="sortPrice">Price</th>
           <th>Image URL</th>
           <th><button>Add</button></th>
         </tr>
       </thead>
       <tbody>
-        x``
         <tr v-for="property of properties" :key="property.id">
           <td>{{ property.id }}</td>
           <td><img :src="property.image_url" :alt="property.title" /></td>
           <td>{{ property.title }}</td>
           <td>{{ property.area }}</td>
           <td>{{ property.bedrooms }}</td>
+          <td>R{{ property.price }}</td>
           <td>{{ property.image_url }}</td>
           <td>
             <button @click="deleteProperty(property.id)">Delete</button>
@@ -46,6 +47,9 @@ export default {
   methods: {
     deleteProperty(id) {
       this.$store.dispatch("deleteProperty", id);
+    },
+    sortPrice() {
+      this.$store.commit("sortPropertiesByPrice");
     },
   },
 };

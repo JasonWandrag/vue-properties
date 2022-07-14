@@ -7,6 +7,7 @@
       <input type="text" v-model="property.area" />
       <input type="text" v-model="property.image_url" />
       <input type="number" v-model="property.bedrooms" />
+      <input type="number" v-model="property.price" />
       <button type="submit">Update</button>
     </form>
   </div>

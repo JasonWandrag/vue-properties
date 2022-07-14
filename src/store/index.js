@@ -5,6 +5,7 @@ export default createStore({
     user: null,
     properties: null,
     property: null,
+    asc: true,
   },
   mutations: {
     setUser: (state, user) => {
@@ -15,6 +16,15 @@ export default createStore({
     },
     setProperty: (state, property) => {
       state.property = property;
+    },
+    sortPropertiesByPrice: (state) => {
+      state.properties.sort((a, b) => {
+        return a.price - b.price;
+      });
+      if (!state.asc) {
+        state.properties.reverse();
+      }
+      state.asc = !state.asc;
     },
   },
   actions: {
