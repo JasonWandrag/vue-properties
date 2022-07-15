@@ -1,5 +1,12 @@
 <template>
   <div v-if="properties">
+    <input type="text" v-model="search" placeholder="Search..." />
+    <select v-model="area">
+      <option value="All" selected>All</option>
+      <option value="Durban">Durban</option>
+      <option value="Cape Town">Cape Town</option>
+      <option value="Pretoria">Pretoria</option>
+    </select>
     <table>
       <thead>
         <tr>
@@ -35,9 +42,21 @@
 <script>
 import UpdateModal from "../components/UpdateModal.vue";
 export default {
+  data() {
+    return {
+      search: "",
+      area: "All",
+    };
+  },
   computed: {
     properties() {
-      return this.$store.state.properties;
+      return this.$store.state.properties?.filter((property) => {
+        let isMatch = true;
+        if (!property.title.toLowerCase().includes(this.search.toLowerCase()))
+          isMatch = false;
+        if (this.area !== "All" && property.area !== this.area) isMatch = false;
+        return isMatch;
+      });
     },
   },
   mounted() {

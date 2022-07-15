@@ -4,7 +4,12 @@
     <button @click="toggleModal">x</button>
     <form @submit.prevent="updateProperty">
       <input type="text" v-model="property.title" />
-      <input type="text" v-model="property.area" />
+      <select v-model="property.area">
+        <option value="All" selected>All</option>
+        <option value="Durban">Durban</option>
+        <option value="Cape Town">Cape Town</option>
+        <option value="Pretoria">Pretoria</option>
+      </select>
       <input type="text" v-model="property.image_url" />
       <input type="number" v-model="property.bedrooms" />
       <input type="number" v-model="property.price" />
